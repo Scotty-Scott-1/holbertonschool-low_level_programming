@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 
-/*
-*
-* main - description
-*
-* return: 0
-*/
+/**
+ * main - Entry point of the program
+ *
+ * Description: A function that prints "Hello, World!"
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	const char *message = "\"Programming is like building a multilingual puzzle";
@@ -14,5 +15,3 @@ int main(void)
 	puts(message);
 	return (0);
 }
-
-
