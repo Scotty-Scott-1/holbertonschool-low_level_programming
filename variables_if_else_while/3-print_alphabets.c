@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
-* Main - Entry point of the function
+* main - Entry point of the function
 *
 * Description - Prints the alphabet in lowercase then uppercase
 *
@@ -13,14 +13,13 @@ int main(void)
 	char A;
 	char a;
 
-	for (i = 'A'; i <= 'Z'; i++)
+	for (i = 'a'; i <= 'z'; i++)
 	{
 	a = i;
-	}
 	putchar(a);
 	A = toupper(a);
 	putchar(A);
+	}
+
 	return (0);
-
 }
-
