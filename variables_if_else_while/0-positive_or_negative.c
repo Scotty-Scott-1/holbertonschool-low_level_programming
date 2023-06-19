@@ -4,6 +4,8 @@
 /**
 * main - Print a statement
 *
+* Description - a function that does something
+*
 * return - 0
 */
 int main(void)
