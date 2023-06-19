@@ -9,16 +9,14 @@
 int main(void)
 {
 	char a = 'a';
-	char i;
 
 	while (a <= 'z')
 	{
 	if (a != 'e' && a != 'q')
 	{
-	a = 'i';
-	i++;
 	putchar(a);
 	}
+	a++;
 	}
 	return (0);
 }
