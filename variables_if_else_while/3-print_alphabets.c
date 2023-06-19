@@ -12,14 +12,17 @@ int main(void)
 	int i;
 	char A;
 	char a;
+	int I;
 
 	for (i = 'a'; i <= 'z'; i++)
 	{
 	a = i;
 	putchar(a);
 	}
-	A = toupper(a);
+	for (I = 'A'; I <= 'Z'; I++)
+	{
+	A = I;
 	putchar(A);
-
+	}
 	return (0);
 }
