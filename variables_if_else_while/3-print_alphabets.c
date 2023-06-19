@@ -13,6 +13,7 @@ int main(void)
 	char A;
 	char a;
 	int I;
+	char new = '\n';
 
 	for (i = 'a'; i <= 'z'; i++)
 	{
@@ -24,5 +25,6 @@ int main(void)
 	A = I;
 	putchar(A);
 	}
+	putchar(new);
 	return (0);
 }
