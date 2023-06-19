@@ -17,9 +17,9 @@ int main(void)
 	{
 	a = i;
 	putchar(a);
+	}
 	A = toupper(a);
 	putchar(A);
-	}
 
 	return (0);
 }
