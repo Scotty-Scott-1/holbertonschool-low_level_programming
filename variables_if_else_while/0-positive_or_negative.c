@@ -2,12 +2,12 @@
 #include <time.h>
 #include <stdio.h>
 /**
-* main - Print a statement
-*
-* Description - a function that does something
-*
-* return - 0
-*/
+ * main - Entry point
+ *
+ * Description: A function that prints a statement
+ *
+ * Return: 0
+ */
 int main(void)
 {
 	int n;
