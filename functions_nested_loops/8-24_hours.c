@@ -6,32 +6,26 @@
 *
 * Return: void
 */
-void jack_bauer(void);
+void jack_bauer(void) 
 {
+
 	int a;
 	int b; 
 	
-	for (a = 0; a <= 24; a++)
-	{ 
-	if (a <= 9)
+	for (a = 0; a <= 23; a++)
 	{
-	_putchar(0);
-	_putchar(a);
+	for (b = 0; b <=59; b++)
+	{
+	_putchar('0' + a / 10);
+	_putchar('0' + a % 10);
 	_putchar(':');
-	}
-	else if (a >= 10)
-	{
-	_putchar (a);
-	_putchar (':');
+	_putchar('0' + b / 10);
+	_putchar('0' + b % 10);
+	_putchar('\n');
+
 	}
 
-	for (b = 0; b <= 59; b++)
-	{
-	_putchar(b);
-	_putchar (':');
-	}
-	
 
-	
+
 	}
 }
