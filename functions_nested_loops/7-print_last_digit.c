@@ -7,8 +7,6 @@
 * Return: int
 */
 int print_last_digit(int a)
-{
-	a = a % 10; 
-	
-	return ("%d");
+{ 
+	return (a % 10);
 }
