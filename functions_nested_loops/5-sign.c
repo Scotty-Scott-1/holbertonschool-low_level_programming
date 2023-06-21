@@ -3,7 +3,7 @@
 /**
 * print_sign - A function that returns +, 0 or -
 *
-* @c: A variable
+* @n: A variable
 * Descrption - a function
 *
 * Return: int
@@ -18,6 +18,7 @@ int print_sign(int n)
 	else if (n == 0)
 	{
 	_putchar('0');
+	return (0);
 	}
 	else
 	_putchar('-');
