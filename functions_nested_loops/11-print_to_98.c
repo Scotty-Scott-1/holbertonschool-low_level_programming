@@ -11,23 +11,23 @@ void print_to_98(int n)
 {
 	int re;
 
-
-	if (n <= 98) 
+	if (n <= 98)
 	{
-	for (re = n; re <= 98; re++) 
+	for (re = n; re <= 98; re++)
 	{
 	printf("%d", re);
-	if (re <= 98) {
+	if (re != 98 && n != 98)
+	{
 	printf(", ");
 	}
 	}
-	} 
-	else 
+	}
+	else
 	{
-	for (re = n; re >= 98; re--) 
+	for (re = n; re >= 98; re--)
 	{
 	printf("%d", re);
-	if (re>= 98) 
+	if (re != 98 && n != 98)
 	{
 	printf(", ");
 	}
