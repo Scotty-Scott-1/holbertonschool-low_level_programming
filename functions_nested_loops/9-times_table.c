@@ -17,28 +17,25 @@ void times_table(void)
 	for (b = 0; b <= 9; b++)
 	{
 	c = a * b;
-	if (c <= 9)
+	if (c < 10)
 	{
 	_putchar('0' + c);
-	}
-	if (c < 9)
-	{
+	_putchar(' ');
 	_putchar(' ');
 	}
-	if (c > 9)
+	else
 	{
 	_putchar('0' + c / 10);
 	_putchar('0' + c % 10);
+	_putchar(' ');
 	}
 	if (b < 9)
 	{
 	_putchar(',');
 	_putchar(' ');
 	}
-	else
-	{
+	}
 	_putchar('\n');
-	}
-	}
+
 	}
 }
