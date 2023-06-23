@@ -25,9 +25,6 @@ void times_table(void)
 		}
 		_putchar('0' + c);
 		}
-	
-	
-
 	else
 	{
 	_putchar('0' + c / 10);
@@ -45,6 +42,5 @@ void times_table(void)
 	}
 	}
 	_putchar('\n');
-	
 	}
 }
