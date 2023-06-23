@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 * print_line - print a line
-*
+* @n: an int
 * Description - Where n is the number of times
 *
 *
