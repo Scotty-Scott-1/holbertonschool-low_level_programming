@@ -1,10 +1,10 @@
 #include "main.h"
 /**
-* main -  3 and 5 FizzBuzz
+* main - 3 and 5 FizzBuzz
 *
 * Description - print 1 to 100. with space.
 *
-* Return: 0
+* Return: 0 sucess
 *
 */
 int main(void)
@@ -15,15 +15,15 @@ int main(void)
 	{
 	if (i % 3 == 0 && i % 5 == 0)
 	{
-	printf ("FizzBuzz ");
+	printf("FizzBuzz ");
 	}
 	else if (i % 3 == 0 && i % 5 != 0)
 	{
-	printf ("Fizz ");
+	printf("Fizz ");
 	}
 	else if (i % 5 == 0 && i % 3 != 0 && i <100)
 	{
-	printf ("Buzz ");
+	printf("Buzz ");
 	}
 	else if (i % 5 == 0 && i % 3 != 0 && i ==100)
 	{
@@ -31,11 +31,11 @@ int main(void)
 	}
 	else if (i % 3 != 0 && i % 5 !=0)
 	{
-	printf ("%d", i);
-	printf (" ");
+	printf("%d", i);
+	printf(" ");
 	}
 	}
-	printf ("\n");
+	printf("\n");
 
 return (0);
 }
