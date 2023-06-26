@@ -18,21 +18,12 @@ while (s[i] != '\0')
 i++;
 }
 l = i - 1;
-
-while(r < l)
+while (r < l)
 {
-	char x = s[r];
+char x = s[r];
 s[r] = s[l];
 s[l] = x;
 r++;
 l--;
-
 }
-
-
-
-
-
-
-
 }
