@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 * reset_to_98 - use a pointer to change a value
-* @*n: a pointer
+* @n: a pointer
 * Description - change vaule of int in source file
 *
 * Return: void
