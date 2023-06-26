@@ -1,7 +1,5 @@
 Project 1 pointers, strings, arrays
 Admin:
 Directory [done]
-Header file [done]
-README [done]
-
-kflksdlfks
+Header file [done]cd
+README.md 
