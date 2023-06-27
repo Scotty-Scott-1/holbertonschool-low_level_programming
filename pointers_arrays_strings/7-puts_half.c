@@ -15,16 +15,33 @@ while (str[x] != '\0')
 {
 x++;
 }
-half = x / 2;
+
 
 if (x % 2 == 0 )
+
+
 {
-	while(x >= half)
+	half = x / 2;
+	while(x > half)
 	{
 		half++;
 		_putchar(str[half]);
 
 	}
+
+
+
+
+}
+else {
+	half = x -1 / 2;
+while(x > half)
+	{
+		half++;
+		_putchar(str[half]);
+
+
+
 }
 
 
@@ -32,3 +49,4 @@ if (x % 2 == 0 )
 
 }
 
+}
