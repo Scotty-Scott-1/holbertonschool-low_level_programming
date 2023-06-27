@@ -29,7 +29,7 @@ void puts_half(char *str)
 
 	else
 	{
-	half = x -1 / 2;
+	half = x - 1/ 2;
 	while(x > half)
 	{
 	half++;
@@ -38,6 +38,6 @@ void puts_half(char *str)
 	}
 
 
-
+_putchar('\n');
 
 }
