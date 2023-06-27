@@ -22,8 +22,8 @@ void puts_half(char *str)
 	half = x / 2;
 	while(x > half)
 	{
-		half++;
 		_putchar(str[half]);
+		half++;
 	}
 	}
 
@@ -32,8 +32,8 @@ void puts_half(char *str)
 	half = x - 1/ 2;
 	while(x > half)
 	{
-	half++;
 	_putchar(str[half]);
+	half++;
 	}
 	}
 
