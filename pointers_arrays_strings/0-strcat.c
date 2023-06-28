@@ -12,14 +12,17 @@ int srclen = 0;
 int destlen = 0;
 int i;
 while(*dest != '\0')
-{destlen++;}
+{destlen++;
+dest++;}
 
 while (*src != '\0')
-{srclen++;}
-
-for(i = 0; i < srclen;i++ )
-{dest[i] = src[i];}
+{srclen++;
+src++;}
 
 
+for(i = 0; i < srclen && *src != '\0';i++)
+{dest[i + destlen] = src[i];}
+
+dest[i + destlen] = '\0';
 return (dest);
 }
