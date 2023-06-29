@@ -1,5 +1,4 @@
 #include "main.h"
-#include "5-main.c"
 /**
 * string_toupper - convert to uppercase
 * @str: a string
