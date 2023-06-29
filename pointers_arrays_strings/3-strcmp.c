@@ -1,5 +1,5 @@
 /**
-* _ strcrm - compare two strings
+* _ strcmp - compare two strings
 * @s1: a string
 * @s2: a string
 *
