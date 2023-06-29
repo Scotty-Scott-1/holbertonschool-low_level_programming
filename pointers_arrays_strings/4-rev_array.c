@@ -1,25 +1,25 @@
 #include "main.h"
-/*
+/**
 * reverse_array - reverse an array
-* @*a: an int
-* @*n: an int
+* @a: an int
+* @n: an int
 *
 * Description: a function
 *
 * Return: void
 */
-#include "main.h"
 void reverse_array(int *a, int n)
 {
 	int i = 0;
-	int b;
+	int b = n - 1;
+	int c;
 
-	while (i < (n / 2) - 1)
+	while (i < b)
 	{
-		b = a[i];
-		a[i] = a[n - 1];
-		a[n - 1] = b;
+		c = a[i];
+		a[i] = a[b];
+		a[b] = c;
 		i++;
-		n--;
+		b--;
 	}
 }
