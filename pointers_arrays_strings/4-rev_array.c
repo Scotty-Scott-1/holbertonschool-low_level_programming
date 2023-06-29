@@ -1,5 +1,5 @@
 /*
-* reverse_array - reverse andfd array
+* reverse_array - reverse an array
 * @a: an int
 * @n: an int
 * Description: a function
