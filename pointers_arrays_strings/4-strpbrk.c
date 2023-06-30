@@ -3,7 +3,7 @@
  *_strpbrk - search for first occurances of accept in s
  * @s: pointer to a string
  * @accept: pointer to a string
- * Description: recreate strpbrk functoin
+ * Description: recreate a functoin
  *
  * Return: char
  *
