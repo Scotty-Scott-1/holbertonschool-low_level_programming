@@ -1,5 +1,11 @@
 #include "main.h"
-#include <stdio.h>
+/**
+*
+*
+*
+*
+*
+*/
 
 unsigned int _strspn(char *s, char *accept)
 {
@@ -11,9 +17,13 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		for (a = 0; accept[a] != '\0'; a++)
 		{
-			if (accept[a] == s[i])
-			{ui++;}
+			if (s[i] == accept[a])
+			{ui++;
+			break;}
+
 		}
 	}
+
+
 return (ui);
 }
