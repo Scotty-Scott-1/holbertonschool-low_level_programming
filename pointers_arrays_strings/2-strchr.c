@@ -1,3 +1,6 @@
+#include "main.h"
+#include <stdio.h>
+
 /**
 * _strchr - return a pointer to c
 * @c: a char
@@ -18,9 +21,12 @@ while (s[i] != '\0')
 {
 	if (s[i] == c)
 	{
-		return (&s[i]);
+	return (s);
 	}
 	i++;
+
 }
-return ('\0');
+
+
+return (0);
 }
