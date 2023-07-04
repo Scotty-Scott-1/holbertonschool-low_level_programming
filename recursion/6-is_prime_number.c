@@ -5,34 +5,38 @@
 * @div: = 1 and incremented
 * Description - if n2 / div < div prime. else inc div
 *
-* return: int
+* Return: int
 *
 */
 
 
 int _prime(int n2, int div)
 {
-if (n2 < 2)
-{
-	return (0);
-}
-	else if (n2 % div == 0 && div >= 2)
-{
-	return (0);
-}
-	else if (n2 / div < div)
+		if (n2 < 2)
+	{
+		return (0);
+	}
+		else if (n2 % div == 0 && div >= 2)
+	{
+		return (0);
+	}
+		else if (n2 / div < div)
 	{
 		return (1);
 	}
-	else
+		else
 	{
-	return (_prime(n2, ++div));
+		return (_prime(n2, ++div));
 	}
 }
-
-
-
-
+/**
+* is_prime_number - if < 2 !prime
+* @n: an int
+* Description: else call other function
+*
+* Return: int
+*
+*/
 int is_prime_number(int n)
 {
 		if (n < 2)
@@ -43,5 +47,4 @@ int is_prime_number(int n)
 	{
 		return (_prime(n, 1));
 	}
-
 }
