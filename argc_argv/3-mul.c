@@ -5,7 +5,7 @@
 * main - print sum of 2 args if there are 2
 * @argc: counts args
 * @argv: array of args
-* Decription: or error 
+* Decription: or error
 * Return: 0
 */
 int main(int argc, char *argv[])
