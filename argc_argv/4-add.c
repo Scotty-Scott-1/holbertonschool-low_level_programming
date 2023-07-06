@@ -28,10 +28,10 @@ int main(int argc, char *argv[])
 		arg = argv[i];
 		for (j = 0; arg[j] != '\0'; j++)
 		{
-			if (!isdigit(*arg))
+			if (arg[j] < '0' || arg[j] > '9')
 			{
-				printf ("Error\n");
-				return(1);
+				printf("Error\n");
+				return (1);
 			}
 		}
 		number = atoi(arg);
