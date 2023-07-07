@@ -1,39 +1,27 @@
+#include "main.h"
+/**
+* leet - convert chars to other chars
+* @s: a string
+* Description: a function
+*
+* Return: char
+*/
 char *leet(char *s)
 {
+	int i;
+	int j;
+	char num[5] = "43071";
+	char c[5] = "aeotl";
 
-
-int i;
-
-		for (i = 0; s[i] != '\0'; i++)
-{
-		if (s[i] == 'a' || s[i] == 'A')
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0 ; c[j] != '\0' ; j++)
 		{
-			s[i] = '4';
+			if (s[i] == c[j] || s[i] == c[j] - 32)
+			{
+				s[i] = num[j];
+			}
 		}
-		else if(s[i] == 'e' || s[i] == 'E')
-		{
-			s[i] = '3';
-		}
-		else if(s[i] == 'o' || s[i] == 'O')
-		{
-			s[i] = '0';
-		}
-		else if(s[i] == 't' || s[i] == 'T')
-		{
-			s[i] = '7';
-		}
-		else if(s[i] == 'l' || s[i] == 'L')
-		{
-			s[i] = '1';
-		}
-		i++;
-
-
-
-
-
-
-
-}
+	}
 return (s);
 }
