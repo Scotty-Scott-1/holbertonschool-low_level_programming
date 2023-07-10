@@ -1,12 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-* str_concat - concatanate two strings to mem location
+* *str_concat- concatanate two strings to mem location
 * @s1: a string
 * @s2: a string
-* Description - a function
+* Description: a function
 *
-* return: char
+* Return: char
 *
 */
 char *str_concat(char *s1, char *s2)
