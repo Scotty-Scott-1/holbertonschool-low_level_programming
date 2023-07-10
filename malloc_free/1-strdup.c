@@ -20,9 +20,9 @@ char *_strdup(char *str)
 		i++;
 	}
 
-	s2 = malloc(i);
+	s2 = malloc(i+1);
 
-	if (*str == '\0')
+	if (*str == '\0' || i ==0)
 	{
 		return ('\0');
 	}
