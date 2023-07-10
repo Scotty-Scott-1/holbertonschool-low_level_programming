@@ -26,12 +26,11 @@ char *_strdup(char *str)
 	{
 		i++;
 	}
-	s2 = malloc(i+1);
+	s2 = malloc(i + 1);
 
 
- 	if (s2 == 0)
+	if (s2 == 0)
 	{
-
 		return (NULL);
 	}
 	while (j < i)
