@@ -1,15 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-/*
-* Write a function that allocates memory using malloc.
-
-Prototype: void *malloc_checked(unsigned int b);
-Retur
-*
-*
-*
-*
+/**
+* malloc_checked - check if null
+* @b: an unsigned int
+* Description - a function
+* Return: void
 */
 void *malloc_checked(unsigned int b)
 {
@@ -20,5 +16,5 @@ void *malloc_checked(unsigned int b)
 	{
 	exit(98);
 	}
-	exit(0);
+	return (ptr);
 }
