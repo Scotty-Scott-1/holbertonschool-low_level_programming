@@ -1,12 +1,13 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-/*
-* string_nconccat - concat 2 strings n times
-*
+/**
+* string_nconcat - contact 2 strings to n
+* @s1: a string
+* @s2: a string
+* @n: an int
 * Description - a function
-*
-* Return: char
+* Return: void
 *
 **/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
