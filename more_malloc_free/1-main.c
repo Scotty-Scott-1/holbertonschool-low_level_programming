@@ -1,42 +1,27 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-char *string_nconcat(char *, char *, unsigned int);
-
 /**
- * main - check the code .
+ * main - check the code
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	char *s;
+    int i;
+    char *concat;
 
-	s = string_nconcat("Hello", NULL, 12);
-	if (s == NULL)
-	{
-		printf("failed\n");
-		return (1);
-	}
-	printf("%s\n", s);
-	free(s);
+    concat = string_nconcat("Best ", "School !!!", 6);
 
-	s = string_nconcat(NULL, "Hello", 0);
-	if (s == NULL)
-	{
-		printf("failed\n");
-		return (1);
-	}
-	printf("%s\n", s);
-	free(s);
+for (i = 0;concat[i] != '\0'; i++ )
+{
+    putchar(concat[i]);
 
-	s = string_nconcat(NULL, NULL, 10);
-	if (s == NULL)
-	{
-		printf("failed\n");
-		return (1);
-	}
-	printf("%s\n", s);
-	free(s);
-	return (0);
+}
+
+putchar('\n');
+ /*   printf("%s\n", concat); */
+    free(concat);
+    return (0);
 }
