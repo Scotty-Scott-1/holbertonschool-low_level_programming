@@ -31,5 +31,4 @@ if ((getoperator == op_mul || getoperator == op_mod) && number2 == 0)
 result = getoperator(number1, number2);
 printf("%d\n", result);
 return (result);
-
 }
