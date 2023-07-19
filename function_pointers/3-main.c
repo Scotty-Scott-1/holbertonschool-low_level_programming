@@ -1,10 +1,20 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
+/**
+* main - a function
+* @argc: amount of command line agrd
+* @argv: array of command line args
+* Description: checks for errors and exits.
+* calls get_op command line opertor as arg.
+* sets command line ints as vars. calls get op with numbers as args
+* Return: int
+*/
 
-int main(int argc, char* argv[])
+
+int main(int argc, char *argv[])
 {
-int (*getoperator) (int,int);
+int (*getoperator)(int, int);
 int number1;
 int number2;
 int result;
