@@ -11,7 +11,7 @@ int result;
 
 if (argc != 4)
 {
-	printf("Error\n %d", argc);
+	printf("Error\n");
 	exit(98);
 }
 getoperator = get_op_func(argv[2]);
@@ -23,12 +23,12 @@ if (getoperator == NULL)
 	printf("Error\n");
 	exit(99);
 }
-if ((getoperator == op_mul || getoperator == op_mod) && number2 == 0)
+if ((getoperator == op_div || getoperator == op_mod) && number2 == 0)
 {
 	printf("Error\n");
 	exit(100);
 }
 result = getoperator(number1, number2);
 printf("%d\n", result);
-return (result);
+return (0);
 }
