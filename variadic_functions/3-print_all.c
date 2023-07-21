@@ -14,6 +14,7 @@ void print_all(const char * const format, ...)
 {
 	int i = 0;
 	char temp;
+	int tempi;
 	char *temp2;
 	double tempd;
 	char *separator = ", ";
@@ -29,8 +30,8 @@ void print_all(const char * const format, ...)
 				printf("%c", temp);
 				break;
 				case 'i':
-				temp = va_arg(formats, int);
-				printf("%d", temp);
+				tempi = va_arg(formats, int);
+				printf("%d", tempi);
 				break;
 				case 'f':
 				tempd = va_arg(formats, double);
@@ -51,6 +52,7 @@ void print_all(const char * const format, ...)
 				|| format[i] == 'f' || format[i] == 's'))
 				{printf("%s", separator); }
 			i++; }
+			va_end(formats);
 printf("\n");
 return;
 }
