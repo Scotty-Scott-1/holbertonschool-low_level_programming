@@ -52,7 +52,7 @@ ref_t reference [] = {
 	int j;
 	char *separator = "";
 
-
+	va_start(args, format);
 	while (format && format[i])
 	{
 		j = 0;
