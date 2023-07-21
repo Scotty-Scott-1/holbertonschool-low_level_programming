@@ -12,18 +12,14 @@
 
 void print_all(const char * const format, ...)
 {
-	int i = 0;
-	char temp;
-	int tempi;
-	char *temp2;
+	int i = 0, tempi;
+	char *temp2, *separator = ", ", temp;
 	double tempd;
-	char *separator = ", ";
 	va_list formats;
 
 	va_start(formats, format);
-	while(format == NULL)
-	{
-		printf("\n");
+	while (format == NULL)
+	{	printf("\n");
 		return;
 	}
 		while (format[i] != '\0' && format != NULL)
@@ -45,15 +41,11 @@ void print_all(const char * const format, ...)
 				case 's':
 				temp2 = va_arg(formats, char *);
 				if (temp2 == NULL)
-				{
-					printf("(nil)");
-					break;
-				}
+				{	printf("(nil)");
+					break;	}
 				printf("%s", temp2);
-				break;
-			}
-				if (format[i + 1] != '\0' &&
-				(format[i] == 'c' || format[i] == 'i'
+				break; }
+				if (format[i + 1] != '\0' && (format[i] == 'c' || format[i] == 'i'
 				|| format[i] == 'f' || format[i] == 's'))
 				{printf("%s", separator); }
 			i++; }
