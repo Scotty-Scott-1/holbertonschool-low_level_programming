@@ -16,28 +16,33 @@ list_t *add_node(list_t **head, const char *str)
 	int i = 0;
 	int j = 0;
 
+	list_t *newNode = malloc(sizeof(list_t));
 
-/*create and malloc new node. if new node is null return null*/
-list_t *newNode = malloc(sizeof(list_t));
-if (newNode == NULL)
-{
-	return (NULL);
-}
-/*get length of the str arg and malloc new node.str with str length + 1*/
+	if (newNode == NULL)
+	{
+		return (NULL);
+	}
+
 	while (str[i] != '\0')
 	{
 		i++;
 	}
 	newNode->str = malloc(i + 1);
-/*copy new str to new node.str. add null terminator. set new node.len to i*/
+
+	if (newNode->str == NULL)
+	{
+		free(newNode);
+		return (NULL);
+	}
+
 	while (j < i)
 	{
 		newNode->str[j] = str[j];
 		j++;
 	}
+
 	newNode->str[j] = '\0';
 	newNode->len = i;
-/*set set new node.next to head and head to new node*/
 	newNode->next = *head;
 	*head = newNode;
 
