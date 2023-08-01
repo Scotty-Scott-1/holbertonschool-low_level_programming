@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <stddef.h>
 /**
-* add_node_end - a function that adds a new a node after head
+* add_node_end - a function that adds a new node to end of list
 *
-* Description: adds a new node to the end of a list
+* Description: adds a new node to the end of a list. If head is null
 * @head: head of a linked list
 * @str: a string
 * Return: address of new node
@@ -46,12 +46,6 @@ list_t *add_node_end(list_t **head, const char *str)
 			j++;
 		}
 
-	if (head == NULL || *head == NULL)
-	{
-		*head = newNode;
-	}
-	else
-	{
 			/*traverse the list and set temp to the end*/
 			temp = *head;
 
@@ -62,7 +56,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 			/*set temp.next to new node*/
 			temp->next = newNode;
-	}
+
 
 	newNode->len = i;
 	return (newNode);
