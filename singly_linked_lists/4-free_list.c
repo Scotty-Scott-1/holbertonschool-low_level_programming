@@ -10,7 +10,18 @@
 
 void free_list(list_t *head)
 {
-free(head->next);
-free(head->str);
-free(head);
+
+list_t *saved;
+list_t *temp;
+saved = head;
+
+while (saved != NULL)
+{
+	temp = saved->next;
+	free(saved->str);
+	free(saved);
+	saved = temp;
+
+}
+
 }
