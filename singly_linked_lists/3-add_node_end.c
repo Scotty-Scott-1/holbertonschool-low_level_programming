@@ -5,6 +5,7 @@
 * add_node_end - a function that adds a new node to end of list
 *
 * Description: adds a new node to the end of a list. If head is null
+* new node == head. If malloc fails return null
 * @head: head of a linked list
 * @str: a string
 * Return: address of new node
@@ -18,46 +19,39 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *temp;
 	list_t *newNode;
 
-
-	/*1. create and malloc a new node. 2. handle if new node is null*/
-/*1*/	newNode = malloc(sizeof(list_t));
-/*2*/	if (newNode == NULL)
+	newNode = malloc(sizeof(list_t));
+	if (newNode == NULL)
 	{
 		return (NULL);
 	}
-
-	/*1 get the string length. 2 malloc string length.*/
-	/*3 handle is new node.str is null*/
-/*1*/	while (str[i] != '\0')
+	while (str[i] != '\0')
 	{
 		i++;
 	}
-/*2*/	newNode->str = malloc(i + 1);
-/*3*/	if (newNode->str == NULL)
+	newNode->str = malloc(i + 1);
+	if (newNode->str == NULL)
 	{
 		free(newNode);
 		return (NULL);
 	}
-
-		/*1 copy str arg to new node.str*/
-/*1*/		while (j < i)
+		while (j < i)
 		{
 			newNode->str[j] = str[j];
 			j++;
 		}
-
-			/*traverse the list and set temp to the end*/
+		if (head == NULL || *head == NULL)
+		{
+			*head = newNode;
+		}
+		else
+		{
 			temp = *head;
-
 			while (temp->next != NULL)
 			{
 				temp = temp->next;
 			}
-
-			/*set temp.next to new node*/
 			temp->next = newNode;
-
-
+		}
 	newNode->len = i;
 	return (newNode);
 }
