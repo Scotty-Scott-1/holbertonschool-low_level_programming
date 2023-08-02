@@ -28,20 +28,23 @@ dlistint_t *newNode;
 	{
 		return (NULL);
 	}
-
-	while (idx != i)
+	while (idx != i + 1)
 	{
+		if (temp != NULL)
+		{
 		temp = temp->next;
 		i++;
+		}
+		else
+		return (NULL);
 	}
-	if (h != NULL)
-	{
-	newNode->next = temp->next;
-	newNode->prev = temp->prev;
-	temp = temp->next;
-	temp->prev = newNode;
-	newNode->next = temp;
 	newNode->n = n;
-	}
+
+	temp->next->prev = newNode;
+	newNode->next = temp->next;
+	temp->next = newNode;
+	newNode->prev = temp;
+
+
 return (newNode);
 }
