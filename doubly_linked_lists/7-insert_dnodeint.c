@@ -46,15 +46,23 @@ dlistint_t *newNode;
 		i++;
 		}
 		else
+		{
+		free(newNode);
 		return (NULL);
+		}
 	}
-
-
-	temp->next->prev = newNode;
+	if( temp->next == NULL)
+	{
+		temp->next=newNode;
+		newNode->prev = temp;
+	}
+	else
+	{
 	newNode->next = temp->next;
-	temp->next = newNode;
 	newNode->prev = temp;
-
+	temp->next->prev = newNode;
+	temp->next = newNode;
+	}
 
 return (newNode);
 }
