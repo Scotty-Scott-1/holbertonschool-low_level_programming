@@ -3,12 +3,12 @@
 #include <stddef.h>
 #include <stdlib.h>
 /**
-* get_dnodeint_at_index - adds a node the at the nth position
+* get_dnodeint_at_index - returns a node the at the nth position
 *
-* Description: adds a new node
+* Description: returns a node
 * @head: pointer to  head
-* @index: the position that new node is inserted
-* Return: address of new node
+* @index: the position of node in question
+* Return: address of node
 *
 */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
@@ -21,13 +21,14 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 
 	while (index != i)
 	{
+		if (temp != NULL)
+		{
 		temp = temp->next;
 		i++;
-	}
-	if (temp == NULL)
-	{
+		}
+		else
 		return (NULL);
-	}
 
+	}
 	return (temp);
 }
