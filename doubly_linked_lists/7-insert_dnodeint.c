@@ -29,12 +29,18 @@ dlistint_t *newNode;
 	{
 		return (NULL);
 	}
-
-	if (*h == NULL || h == NULL)
-	{
-		newNode->n = n;
 		newNode->prev = NULL;
-		*h = newNode;
+		newNode->next = NULL;
+
+	if (*h == NULL)
+	{
+		return (newNode);
+	}
+	if (idx == 0)
+	{
+		newNode->next = temp;
+		temp->prev = newNode;
+		temp = newNode;
 		return (newNode);
 	}
 
@@ -64,5 +70,5 @@ dlistint_t *newNode;
 	temp->next = newNode;
 	}
 
-return (newNode);
-}
+	return (newNode);
+	}
