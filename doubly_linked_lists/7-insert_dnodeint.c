@@ -25,50 +25,31 @@ dlistint_t *newNode;
 	newNode->n = n;
 
 
-	if (newNode == NULL)
+	if (newNode == NULL || h == NULL)
 	{
 		return (NULL);
-	}
-		newNode->prev = NULL;
-		newNode->next = NULL;
-
-	if (*h == NULL)
-	{
-		return (newNode);
-	}
-	if (idx == 0)
-	{
-		newNode->next = temp;
-		temp->prev = newNode;
-		temp = newNode;
-		return (newNode);
+		free(newNode);
+		free(temp);
 	}
 
 	while (idx != i + 1)
 	{
-		if (temp != NULL)
-		{
 		temp = temp->next;
 		i++;
-		}
-		else
-		{
-		free(newNode);
-		return (NULL);
-		}
 	}
-	if( temp->next == NULL)
+	if (h != NULL && i != 0)
 	{
-		temp->next=newNode;
-		newNode->prev = temp;
-	}
-	else
-	{
-	newNode->next = temp->next;
-	newNode->prev = temp;
 	temp->next->prev = newNode;
+	newNode->next = temp->next;
 	temp->next = newNode;
+	newNode->prev = temp;
 	}
-
-	return (newNode);
+	if (temp->next == NULL)
+	{
+		newNode->prev = NULL;
+		newNode->next = temp;
+		temp->next = NULL;
+		temp->prev = newNode;
 	}
+return (newNode);
+}
