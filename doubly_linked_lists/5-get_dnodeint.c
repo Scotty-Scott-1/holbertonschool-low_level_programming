@@ -27,7 +27,7 @@ dlistint_t *newNode;
 		return (NULL);
 	}
 
-	while (index >= i)
+	while (index != i)
 	{
 		temp = temp->next;
 		i++;
