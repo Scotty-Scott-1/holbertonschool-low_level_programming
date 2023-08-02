@@ -14,6 +14,7 @@
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *newNode;
+	/*dlistint_t *temp;*/
 
 
 	/*malloc a new list*/
@@ -27,19 +28,16 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		newNode->n = n;
 		*head = newNode;
 		newNode->prev = *head;
-		newNode->next = NULL;
+
 	}
 	else
 	{
 
-		newNode->prev = *head;
 		newNode->next = *head;
 		*head = newNode;
+		newNode->prev = *head;
 		newNode->n = n;
 	}
 return (newNode);
-
-
-
 
 }
