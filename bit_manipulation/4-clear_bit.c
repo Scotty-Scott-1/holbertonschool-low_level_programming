@@ -19,7 +19,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	{
 		return (-1);
 	}
-	mask = ~(shift << 8 * 8 - 1 - index);
+	mask = ~((shift) << (8 * 8 - 1 - index));
 	*n = *n & mask;
 	return (1);
 
