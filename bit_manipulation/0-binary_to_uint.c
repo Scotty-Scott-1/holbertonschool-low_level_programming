@@ -14,10 +14,10 @@ unsigned int binary_to_uint(const char *b)
 
 	while (b[i] != '\0')
 	{
-		if (i > 31)
+		/*if (i > 31)
 		{
 			return (0);
-		}
+		}*/
 		if (b[i] - '0' == 0 || b[i] - '0' == 1)
 		{
 			i++;
