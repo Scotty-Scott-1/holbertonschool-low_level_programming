@@ -18,8 +18,14 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	i = n ^ m;
 	while (i != 0)
 {
-		result = result + (i & 1);
-		i  = i >> 1;
+	result = result + (i & 1);
+	i  = i >> 1;
+
+	if (result >= 64)
+	{
+		return (64);
+	}
+
 }
 return (result);
 
