@@ -12,12 +12,13 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int result = 0;
 	unsigned int powerof = 1;
 
+	if (b == NULL)
+	{
+		return (0);
+	}
+
 	while (b[i] != '\0')
 	{
-		/*if (i > 31)
-		{
-			return (0);
-		}*/
 		if (b[i] - '0' == 0 || b[i] - '0' == 1)
 		{
 			i++;
