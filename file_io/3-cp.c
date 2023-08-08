@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 	char *buffer = NULL;
 	int readchars = 1024;
 	int output = 0;
+	mode_t mask = umask(0);
 
 	if (argc != 3)
 	{
@@ -32,13 +33,13 @@ int main(int argc, char *argv[])
 		return (-1);
 	}
 
-	fileDesc_2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0644);
+	fileDesc_2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if(fileDesc_2 == -1)
 	{
 		dprintf(2,"Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-
+umask(mask);
 	buffer = (char *)malloc(1024);
 	if (buffer == NULL)
 	{
@@ -51,7 +52,7 @@ int main(int argc, char *argv[])
 
 		if (readchars == -1)
 		{
-			dprintf(2,"Can't read from file %s", argv[1]);
+			dprintf(2,"Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 
