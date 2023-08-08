@@ -64,16 +64,14 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	close(fileDesc_1);
 
-	if(fileDesc_1 == -1)
+	if(close(fileDesc_1) == -1)
 	{
 		dprintf(2,"Error: Can't close fd fileDesc_1\n");
 		exit(100);
 	}
-	close(fileDesc_2);
 
-		if(fileDesc_2 == -1)
+		if(close(fileDesc_2) == -1)
 	{
 		dprintf(2,"Error: Can't close fd fileDesc_2\n");
 		exit(100);
