@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 		buffer = "";
 	}
 
-	while (readchars == 1024)
+	while (readchars > 0)
 	{
 		readchars = read(fileDesc_1, buffer, 1024);
 
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 
-		output = write(fileDesc_2, buffer, 1024);
+		output = write(fileDesc_2, buffer, readchars);
 		if (output == -1)
 		{
 			dprintf(2,"Error: Can't write to %s\n", argv[2]);
