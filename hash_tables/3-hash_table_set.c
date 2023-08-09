@@ -30,6 +30,7 @@ return (0);
 
 newNode->key = strdup(key);
 newNode->value = strdup(value);
+if(newNode->next != NULL)
 newNode->next = ht->array[index];
 ht->array[index] = newNode;
 
