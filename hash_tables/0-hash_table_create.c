@@ -1,11 +1,10 @@
+#include "hash_tables.h"
 /**
 * hash_table_create - create a hash table
 * @size: length of array
 * Decription: create a hash table
 * Return: hash table
 */
-#include "hash_tables.h"
-
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned long int i = 0;
