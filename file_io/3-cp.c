@@ -38,13 +38,13 @@ int main(int argc, char *argv[])
 		readchars = read(fileDesc_1, buffer, 1024);
 		if (readchars == -1)
 		{
-			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+			dprintf(1, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 		output = write(fileDesc_2, buffer, readchars);
 		if (output == -1)
 		{
-			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+			dprintf(1, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
