@@ -20,13 +20,13 @@ int main(int argc, char *argv[])
 	fileDesc_1 = open(argv[1], O_RDONLY);
 	if (fileDesc_1 == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(1, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	fileDesc_2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fileDesc_2 == -1)
 	{
-		dprintf(2, "Error: Can't write to %s\n", argv[2]);
+		dprintf(1, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	umask(mask);
@@ -38,13 +38,13 @@ int main(int argc, char *argv[])
 		readchars = read(fileDesc_1, buffer, 1024);
 		if (readchars == -1)
 		{
-			dprintf(1, "Error: Can't read from file %s\n", argv[1]);
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 		output = write(fileDesc_2, buffer, readchars);
 		if (output == -1)
 		{
-			dprintf(1, "Error: Can't write to %s\n", argv[2]);
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
