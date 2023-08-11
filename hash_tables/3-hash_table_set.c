@@ -32,6 +32,11 @@ return (0);
 
 newNode->key = strdup(key);
 newNode->value = strdup(value);
+if(newNode->key == NULL||newNode->value == NULL)
+{
+	free(newNode);
+	return (0);
+}
 
 tempNode = ht->array[index];
 
