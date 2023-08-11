@@ -13,51 +13,38 @@ int main(int argc, char *argv[])
 	mode_t mask = umask(0);
 
 	if (argc != 3)
-	{
-		write(2, "Usage: cp file_from file_to\n", 28);
-		exit(97);
-	}
+	{	write(2, "Usage: cp file_from file_to\n", 28);
+		exit(97); }
 	fileDesc_1 = open(argv[1], O_RDONLY);
 	if (fileDesc_1 == -1)
-	{
-		dprintf(1, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
+	{	dprintf(1, "Error: Can't read from file %s\n", argv[1]);
+		exit(98); }
 	fileDesc_2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fileDesc_2 == -1)
-	{
-		dprintf(2, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
+	{	dprintf(2, "Error: Can't write to %s\n", argv[2]);
+		exit(99); }
 	umask(mask);
 	buffer = (char *)malloc(1024);
 	if (buffer == NULL)
 		buffer = "";
 	while (readchars > 0)
-	{
-		readchars = read(fileDesc_1, buffer, 1024);
+	{	readchars = read(fileDesc_1, buffer, 1024);
 		if (readchars == -1)
-		{
-			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		{	dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 		output = write(fileDesc_2, buffer, readchars);
 		if (output == -1)
-		{
-			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+		{	dprintf(2, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
 	if (close(fileDesc_1) == -1)
-	{
-		dprintf(2, "Error: Can't close fd fileDesc_1\n");
-		exit(100);
-	}
+	{	dprintf(2, "Error: Can't close fd fileDesc_1\n");
+		exit(100); }
 	if (close(fileDesc_2) == -1)
-	{
-		dprintf(2, "Error: Can't close fd fileDesc_2\n");
-		exit(100);
-	}
+	{	dprintf(2, "Error: Can't close fd fileDesc_2\n");
+		exit(100); }
 	free(buffer);
 	return (0);
 }
